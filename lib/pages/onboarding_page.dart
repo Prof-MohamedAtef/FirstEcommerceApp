@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../bulider_onboarding.dart';
+import '../enum.dart';
 import '../model/onboarding_model.dart';
+import '../shared/cache_helper.dart';
 import '../widgets/default_text.dart';
 
 class OnBoardingScreen extends StatefulWidget{
@@ -28,10 +31,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         backgroundColor: Colors.transparent,
         actions: [
           TextButton(onPressed: (){
-            Navigator.pushAndRemoveUntil(context,
-                MaterialPageRoute(builder: (_)=>
-                const LoginPage()),
-                    (route) => false);
+            // Navigator.pushAndRemoveUntil(context,
+            //     MaterialPageRoute(builder: (_)=>
+            //     const LoginPage()),
+            //         (route) => false);
           },
               child: DefaultText(text:"Skip",
                 fontSize: 20,color: Colors.teal,
